@@ -1,0 +1,123 @@
+@import "bootstrap/scss/bootstrap";
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(90deg, black, grey);
+    height: 100%;
+}
+.moreOrange {
+    background-color: #ff4623;
+}
+nav {
+    padding: 1rem;
+    height: 80px;
+    background-color: white;
+}
+.element {
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.element::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff4623;
+    transition: width 0.3s easy-in 0.2s;
+}
+.element:hover::after {
+    font-weight: 900;
+    animation: slideInUnderline 0.1s ease-in forwards;
+    transition: all 1.35s ease-in-out;
+}
+
+@keyframes slideInUnderline {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes slideOut {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+.hidden {
+  display: none;
+}
+.special {
+    background-color: white;
+     margin-left: 10px;
+     position: relative;
+     top:5px;
+     left:5px;
+     height: 130px;
+     width: 150px;
+}
+@keyframes coloring {
+    from {
+        background-color: white;
+        color: black;
+    }
+    to {
+        background-color: #ff4623;
+        color: linen;
+    }
+}
+.special > div:hover {
+    color: white;
+    background-color:#ff4623;
+    animation: coloring 0.5s;
+    cursor: pointer;
+}
+.rows {
+ padding: 0.6rem;
+}
+.hero {
+    height: 85vh;
+    background: linear-gradient(#2e3138, #cccccc);
+}
+.container {
+    position: relative;
+    top: 200px;
+    color: linen;
+    font-weight: bold;
+}
+h1 {
+    font-size: 52px;
+    font-weight: 900;
+}
+.winners {
+    height: 50vh;
+}
+.relationship {
+    height: 135vh;
+    background: linear-gradient(#2e3138, #cccccc);
+}
+.relationship h3 {
+    font-size: 48px;
+    font-weight: 900;
+}
+.arrow {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 650px;
+    left: 750px;
+}
