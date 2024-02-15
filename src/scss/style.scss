@@ -1,123 +1,155 @@
 @import "bootstrap/scss/bootstrap";
+$main-color: #ff4623;
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    background: linear-gradient(90deg, black, grey);
-    height: 100%;
+  background: linear-gradient(90deg, black, grey);
+  height: 100%;
 }
 .moreOrange {
-    background-color: #ff4623;
+  background-color: $main-color;
 }
 nav {
-    padding: 1rem;
-    height: 80px;
-    background-color: white;
-}
-.element {
+  padding: 1rem;
+  height: 80px;
+  background-color: white;
+
+  .element {
     font-size: 16px;
     position: relative;
     display: inline-block;
     overflow: hidden;
     cursor: pointer;
-}
-
-.element::after {
-    content: '';
+  }
+  
+  .element::after {
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #ff4623;
-    transition: width 0.3s easy-in 0.2s;
-}
-.element:hover::after {
+    background-color: $main-color;
+    transition: width 0.9s easy-in 0.2s;
+  }
+  .element:hover::after {
     font-weight: 900;
     animation: slideInUnderline 0.1s ease-in forwards;
     transition: all 1.35s ease-in-out;
-}
+  }
 
+}
 @keyframes slideInUnderline {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 100%;
-    }
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 @keyframes slideOut {
-    from {
-        width: 100%;
-    }
-    to {
-        width: 0%;
-    }
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+.slideOutAnimation {
+  animation: slideOut 2.5s ease-out backwards;
+  transition: all 1.5 ease-in-out;
 }
 .hidden {
   display: none;
 }
 .special {
-    background-color: white;
-     margin-left: 10px;
-     position: relative;
-     top:5px;
-     left:5px;
-     height: 130px;
-     width: 150px;
+  background-color: white;
+  margin-left: 10px;
+  position: relative;
+  top: 5px;
+  left: 5px;
 }
 @keyframes coloring {
-    from {
-        background-color: white;
-        color: black;
-    }
-    to {
-        background-color: #ff4623;
-        color: linen;
-    }
+  from {
+    background-color: white;
+    color: black;
+  }
+  to {
+    background-color: $main-color;
+    color: linen;
+  }
 }
 .special > div:hover {
-    color: white;
-    background-color:#ff4623;
-    animation: coloring 0.5s;
-    cursor: pointer;
+  color: white;
+  background-color: $main-color;
+  animation: coloring 0.5s;
+  cursor: pointer;
 }
 .rows {
- padding: 0.6rem;
+  padding: 0.6rem;
 }
 .hero {
-    height: 85vh;
-    background: linear-gradient(#2e3138, #cccccc);
-}
-.container {
-    position: relative;
-    top: 200px;
-    color: linen;
-    font-weight: bold;
-}
-h1 {
-    font-size: 52px;
-    font-weight: 900;
-}
-.winners {
-    height: 50vh;
-}
-.relationship {
-    height: 135vh;
-    background: linear-gradient(#2e3138, #cccccc);
-}
-.relationship h3 {
-    font-size: 48px;
-    font-weight: 900;
-}
-.arrow {
+  height: 85vh;
+  background: linear-gradient(#2e3138, #cccccc);
+  
+  .arrow {
     height: 50px;
     width: 50px;
-    position: relative;
-    top: 650px;
-    left: 750px;
+  }
+  .helpingClass {
+    text-align: center;
+  }
+
 }
+.selfContainer {
+  height: 75vh;
+}
+.container {
+  color: linen;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.containerdiffer {
+  color: linen;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+h1 {
+  font-size: 52px;
+  font-weight: 900;
+}
+.winners {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50vw;
+  margin-left: 35rem;
+}
+.relationship {
+  height: 135vh;
+  background: linear-gradient(#2e3138, #cccccc);
+}
+.relationship h3 {
+  margin-top: 5rem;
+  font-size: 48px;
+  font-weight: 900;
+}
+.video {
+  margin-top: 5rem;
+  width: 80rem;
+  height: 50rem;
+}
+
